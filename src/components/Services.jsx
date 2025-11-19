@@ -23,31 +23,32 @@ const Services = () => {
   }, []);
   const services = [
     {
-      icon: Zap,
-      title: 'QA Testing & Automation Services',
+      icon: Bot,
+      title: 'AI-Based Testing Solutions',
       description:
-        'Designing and executing comprehensive manual and automated testing solutions using Selenium and structured QA methodologies.',
+        'Developing intelligent test automation frameworks that leverage machine learning to improve test coverage and efficiency.',
       gradient: 'from-purple-600 to-purple-400',
     },
     {
       icon: FlaskConical,
-      title: 'Business Analysis & Requirements Engineering',
+      title: 'Advanced QA Automation',
       description:
-        'Translating business needs into clear user stories, functional specifications, and workflow models that guide effective solution development.',
+        'Creating robust quality assurance processes with automated testing suites for reliable software delivery.',
       gradient: 'from-purple-500 to-purple-300',
     },
     {
-      icon: Bot,
-      title: 'AI-Enhanced Feature Development',
+      icon: Zap,
+      title: 'Intelligent Software Solutions',
       description:
-        'Creating AI-driven application features such as NLP-based recommendations, intelligent pipelines, and lightweight ML integrations.',
+        'Building AI-powered applications that combine smart algorithms with user-centric design for enhanced functionality.',
       gradient: 'from-purple-700 to-purple-500',
     },
     {
       icon: TrendingUp,
-      title: 'Full-Stack Web Application Development',
+      title: 'Quality-Driven Development',
       description:
-'Building modern, scalable full-stack applications using React, Spring Boot, Python, and cloud-ready architectures.',      gradient: 'from-purple-800 to-purple-600',
+        'Implementing best practices in software development with focus on reliability, scalability, and maintainability.',
+      gradient: 'from-purple-800 to-purple-600',
     },
   ];
 
