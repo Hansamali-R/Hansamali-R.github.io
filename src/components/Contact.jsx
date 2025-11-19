@@ -7,15 +7,31 @@ const Contact = () => {
     email: '',
     message: '',
   });
+   const [result, setResult] = useState("");
 
   // Removed type annotation for e
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // In a real application, you would send the data to an API endpoint here.
-    // For demonstration, we reset the form state:
-    setFormData({ name: '', email: '', message: '' }); 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "521660b5-1f52-4de9-8ca4-8c1a7a964b3d");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+    setFormData({ name: '', email: '', message: '' });
   };
+
+  //(e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   // In a real application, you would send the data to an API endpoint here.
+  //   // For demonstration, we reset the form state:
+  //   setFormData({ name: '', email: '', message: '' }); 
+  // };
 
   // Removed type annotation for e
   const handleChange = (e) => {
@@ -111,7 +127,7 @@ const Contact = () => {
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                   <span className="text-gray-300">Internship Opportunities</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                   <span className="text-gray-300">Freelance Projects</span>
                 </div>
@@ -122,7 +138,7 @@ const Contact = () => {
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                   <span className="text-gray-300">Technical Discussions</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -188,6 +204,7 @@ const Contact = () => {
                   className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
                 />
               </button>
+              <p>{result}</p>
             </form>
           </div>
         </div>
