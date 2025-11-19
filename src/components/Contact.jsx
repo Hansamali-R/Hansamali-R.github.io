@@ -29,26 +29,26 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hansamali.ranasinghe@example.com',
-      link: 'mailto:hansamali.ranasinghe@example.com',
+      value: 'hansamali.r00@gmail.com',
+      link: 'mailto:hansamali.r00@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+94 XX XXX XXXX',
-      link: 'tel:+94XXXXXXXXX',
+      value: '+94 76 868 8507',
+      link: 'tel:+94768688507',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'Hansamali Ranasinghe',
-      link: 'https://linkedin.com/in/hansamali-ranasinghe',
+      link: 'https://www.linkedin.com/in/hansamaliranasinghe/',
     },
     {
       icon: Github,
       label: 'GitHub',
       value: '@hansamaliranasinghe',
-      link: 'https://github.com/hansamaliranasinghe',
+      link: 'https://github.com/Hansamali-R',
     },
   ];
   return (
